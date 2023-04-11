@@ -10,8 +10,8 @@ import java.util.List;
 import static files.AnswerId.*;
 
 public class QuestionsDB {
-    private Connection connection;
-    private final ConnectDB connect = new ConnectDB(connection);
+
+    private final ConnectDB connect = new ConnectDB();
     private final List<String> answerSet = new ArrayList<>();
 
     public void examName(ExamTest examTest) {

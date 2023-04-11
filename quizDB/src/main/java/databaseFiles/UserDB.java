@@ -5,8 +5,7 @@ import loginMain.User;
 import java.sql.*;
 
 public class UserDB {
-    private Connection connection;
-    private final ConnectDB connect = new ConnectDB(connection);
+    private final ConnectDB connect = new ConnectDB();
 
 
     public void createUser(User user) throws SQLException {

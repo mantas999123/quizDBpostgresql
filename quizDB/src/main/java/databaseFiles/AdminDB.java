@@ -3,7 +3,6 @@ package databaseFiles;
 import files.ExamTest;
 import files.Question;
 import files.Role;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +11,7 @@ import java.util.Scanner;
 public class AdminDB {
     private final QuestionsDB questionsDB = new QuestionsDB();
     private final Scanner sc = new Scanner(System.in);
-    private  Connection connection;
-    private final ConnectDB connect = new ConnectDB(connection);
+    private final ConnectDB connect = new ConnectDB();
 
 
     public void deleteQuestion() {

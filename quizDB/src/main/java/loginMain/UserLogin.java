@@ -86,8 +86,7 @@ public class UserLogin {
 
     private void userLogin(Scanner sc) {
         User users = new User();
-        Connection connection = null;
-        ConnectDB connectDB = new ConnectDB(connection);
+        ConnectDB connectDB = new ConnectDB();
 
         try {
             System.out.println("Iveskite userName");
@@ -95,7 +94,7 @@ public class UserLogin {
             System.out.println("Iveskite slaptazodi");
             String password = sc.nextLine();
 
-            connection = connectDB.connect();
+            Connection connection = connectDB.connect();
             String sql = ("SELECT \"UserName\", \"Password\" ,\"Role\" FROM \"Users\" WHERE \"UserName\"= ? AND \"Password\"= ? ");
             PreparedStatement user = connection.prepareStatement(sql);
 

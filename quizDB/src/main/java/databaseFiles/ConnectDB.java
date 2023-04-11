@@ -6,9 +6,6 @@ import java.sql.*;
 
 public class ConnectDB {
 
-    public ConnectDB(Connection connection) {
-    }
-
     public Connection connect() throws SQLException {
 
         ApplicationProperties properties = ApplicationProperties.getInstance();
